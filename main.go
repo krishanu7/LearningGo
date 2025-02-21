@@ -20,5 +20,6 @@ func main() {
 	// } else {
 	// 	fmt.Println("Error:", err)
 	// }
-	modules.LearnSwitch()
+	//modules.LearnSwitch()
+	modules.LearnForLoop()
 }
