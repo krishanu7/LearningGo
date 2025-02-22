@@ -23,5 +23,6 @@ func main() {
 	//modules.LearnSwitch()
 	//modules.LearnForLoop()
 	//modules.MapinGo();
-	modules.Structure();
+	//modules.Structure();
+	modules.Pointers();
 }
