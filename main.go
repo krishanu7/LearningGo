@@ -24,5 +24,6 @@ func main() {
 	//modules.LearnForLoop()
 	//modules.MapinGo();
 	//modules.Structure();
-	modules.Pointers();
+	//modules.Pointers();
+	modules.Conversion();
 }
