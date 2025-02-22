@@ -21,5 +21,7 @@ func main() {
 	// 	fmt.Println("Error:", err)
 	// }
 	//modules.LearnSwitch()
-	modules.LearnForLoop()
+	//modules.LearnForLoop()
+	//modules.MapinGo();
+	modules.Structure();
 }
