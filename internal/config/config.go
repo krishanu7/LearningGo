@@ -20,7 +20,6 @@ type Config struct {
 
 func MustLoadConfig() *Config {
 	var configPath string
-
 	configPath = os.Getenv("CONFIG_PATH")
 
 	if configPath == "" {
