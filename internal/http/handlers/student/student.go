@@ -8,9 +8,10 @@ import (
 	"log/slog"
 	"net/http"
 
+	"strconv"
+
 	"github.com/go-playground/validator/v10"
 	"github.com/krishanu7/students-api/internal/storage"
-	"strconv"
 	"github.com/krishanu7/students-api/internal/types"
 	"github.com/krishanu7/students-api/internal/utils/response"
 )
@@ -75,3 +76,15 @@ func GetById(storage storage.Storage) http.HandlerFunc {
 	}
 }
 
+func GetAllStudents(storage storage.Storage) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		slog.Info("Getting all students");
+		students, err := storage.GetAllStudents();
+
+		if err != nil {
+			response.WriteJson(w, http.StatusInternalServerError, response.GeneralError(err))
+			return
+		}
+		response.WriteJson(w, http.StatusOK, students)
+	}
+}
